@@ -1,0 +1,36 @@
+footer {
+    background-color: #323232; /* Dark background color */
+    padding: 20px 0; /* Space above and below */
+    text-align: center; /* Center text in the footer */
+    position: sticky; /* Stick the footer to the bottom */
+
+}
+
+.footer-content {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and copyright */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-right: 20px; /* Space between logo and copyright text */
+}
+
+.footer-logo-img {
+    width: 100px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100px; /* Limit the maximum height */
+}
+
+.footer-copyright {
+    flex-grow: 1; /* Allow copyright text to take up remaining space */
+    text-align: center; /* Center the copyright text */
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #fffcfc; /* Light text color */
+}

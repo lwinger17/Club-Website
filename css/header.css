@@ -1,0 +1,315 @@
+
+
+
+
+/* ---------- HEADER STYLES ---------- */
+.header {
+   background-color:#6D153F;
+   position: fixed;
+   width: 100%; /* full-width header */
+   color: white; 
+   display: flex; /* flexbox to align elements */
+   align-items: center;
+   justify-content: space-between; /* space between left and right sections */
+   padding: 10px 20px; 
+   z-index: 9998; 
+   height: 80px;
+   margin: 0 auto; /* centered the header */
+   max-width: 100%; /* doesn't shrink */
+   box-shadow: none; 
+   overflow: hidden;
+   padding-right: 2vw; /* right padding for space between the header and sidebar toggle */
+}
+
+/* ----- LOGO ----- */
+#leftHeader {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start; 
+   flex: 1; /* flex to occupy remaining space */
+}
+
+/* ----- LINKS ----- */
+#rightHeader {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end; 
+   flex: 1; 
+   margin-right: 1vw;
+   padding-right: 2vw;
+}
+
+
+
+/* ----- LOGO STYLES ----- */
+
+.header-logo {
+   height: 65px;
+   max-height: 65px; /* doesn't grow too large */
+   width: auto; /* maintain aspect ratio */
+   margin-left: 2px;
+   justify-content: center;
+   align-items: center;
+}
+
+/* ----- NAVIGATION STYLES ----- */
+
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   flex-grow: 1; /* allow the nav to take remaining space */
+}
+
+/* list for the navigation links */
+nav ul {
+   list-style: none;
+   display: flex; /* horizontal alignment of items */
+   font-size: 1.5rem; 
+   align-items: center;
+   justify-content: center; 
+}
+
+/* each indivudal list item in the navigation */
+nav ul li {
+   margin-left: 10px; /* spacing between nav items */
+}
+
+/* anchor tag styling for navigation links */
+nav ul li a {
+   color: white;
+   text-decoration: none; 
+   padding: 10px;
+}
+
+
+/* underline hover effect */
+nav ul li a:hover {
+   color: #eaa82a; 
+}
+
+/* underline styling */
+nav ul li a:hover::after {
+   content: '';
+   position: absolute; 
+   bottom: 0; 
+   left: 0;
+   width: 100%; 
+   height: 2px; 
+   background-color: #eaa82a;
+}
+
+/* ----- SIDEBAR STYLES ----- */
+
+/* siderbar container */
+#sidebarMenu {
+   height: calc(100% - 60px); 
+   position: fixed;
+   right: 0;
+   width: 300px;
+   top: 60px;
+   transform: translateX(300px); 
+   transition: transform 250ms ease-in-out; 
+   background-color: #6D153F;
+   z-index: 9997; 
+   overflow-y: auto;
+}
+
+/* Inner sidebar content styling */
+.sidebarMenuInner {
+   margin: 0;
+   padding: 0;
+}
+
+/* Custom scrollbar styling */
+#sidebarMenu::-webkit-scrollbar {
+   width: 8px;
+}
+
+#sidebarMenu::-webkit-scrollbar-track {
+   background: #6D153F;
+}
+
+#sidebarMenu::-webkit-scrollbar-thumb {
+   background-color: #eaa82a; 
+   border-radius: 4px;
+}
+
+/* outer links (main categories) in the sidebar */
+.sidebarMenuInner > li {
+   list-style: none; 
+   color: #fff; 
+   padding: 15px 25px;
+   position: relative;
+   margin-bottom: 10px; 
+   transition: background 0.3s ease, box-shadow 0.3s ease; /* hover effects */
+}
+
+/* Links in the sidebar */
+.sidebarMenuInner > li a {
+   color: #fff; 
+   text-decoration: none;
+   font-size: calc(20px + 1vh); 
+   display: block; /* block-level links */
+   width: 100%; 
+   padding: 1vh  0; /* vertical padding */
+   text-align: left; 
+   transition: color 0.3s ease; /* color transition */
+}
+
+/* inner submenu styling */
+.sidebarMenuInner li ul {
+   padding: 0;
+   margin: 0;
+   list-style: none; 
+   background-color: #6D153F; 
+}
+
+/* submenu list item styling */
+.sidebarMenuInner li ul li {
+   padding-left: 30px; /* indent submenu items */
+   padding-top: 0.5vh;
+   padding-bottom: 0.5vh;
+   transition: background 0.3s ease; /* hover effect */
+}
+
+/* hover effect for inner links */
+.sidebarMenuInner li ul li:hover {
+   background-color: rgba(255, 255, 255, 0.1); /* background color change on hover */
+}
+
+/* inner link styling */
+.sidebarMenuInner li ul li a {
+   font-size: calc(15px + 1vh);
+   color: #fff; 
+   text-decoration: none; 
+   transition: color 0.3s ease; /* color change */
+}
+
+/* icon in submenu items */
+.sidebarMenuInner li ul li a i {
+   margin-left: -10px; /* icon position */
+   margin-right: 10px; /* space between icon and text */
+   font-size: 1.5rem; 
+}
+
+/* hover effect for submenu links */
+.sidebarMenuInner li ul li a:hover {
+   color: #eaa82a; /* change color on hover */
+}
+
+/* ----- SIDEBAR TOGGLE STYLES ----- */
+
+/* hide the checkbox for the sidebar toggle */
+input[type="checkbox"] {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   display: none; /* hidden checkbox */
+}
+
+/* show the sidebar when the checkbox is checked */
+input[type="checkbox"]:checked ~ #sidebarMenu {
+   transform: translateX(0); /* slide the sidebar into view */
+}
+
+
+
+/* ----- SIDEBAR ICON TOGGLE STYLES ----- */
+
+.sidebarIconToggle {
+   transition: all 0.3s;
+   position: relative;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+   top: 10px;
+   height: 30px;
+   width: 40px;
+   margin-top: -10px;
+}
+
+.spinner {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   position: absolute;
+   height: 2px;
+   width: 100%;
+   background-color: #fff;
+}
+
+.horizontal {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   position: relative;
+   float: left;
+   margin-top: 6px;
+}
+
+.diagonal.part-1 {
+   position: relative;
+   transition: all 0.3s;
+   box-sizing: border-box;
+   float: left;
+}
+
+.diagonal.part-2 {
+   transition: all 0.3s;
+   box-sizing: border-box;
+   position: relative;
+   float: left;
+   margin-top: 6px;
+}
+
+/* ----- TOGGLE ANIMATIONS ----- */
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
+   opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+   transform: rotate(135deg);
+   margin-top: 14px;
+   background-color: #eaa82a;
+}
+
+input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+   transform: rotate(-135deg);
+   margin-top: -11px;  /* needs to be more for some reason */
+   background-color: #eaa82a;
+}
+
+
+/* ----- ADMIN LOGIN STYLES ----- */
+
+/* styling for the admin login link in the sidebar */
+.adminLogin {
+   position: absolute;
+   margin-bottom: 0vh; /* put towards the bottom */
+   right: 10px; /* align right */
+   font-size: calc(12px + 1vh); 
+}
+
+/* styling for the admin login */
+.adminLogin a {
+   color: white; 
+   text-decoration: none; 
+   transition: background-color 0.3s ease; 
+}
+
+/* hover effect for admin login */
+.adminLogin a:hover {
+   color: #eaa82a; /* change color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

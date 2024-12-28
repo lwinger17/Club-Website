@@ -1,0 +1,145 @@
+.admin-page {
+    display: flex;
+    height: 100vh;
+    padding-top:60px;
+ }
+ .sidebar {
+    width: 20%;
+    background-color: #6D153F;
+    padding: 20px;
+    border-right: 1px solid #6D153F;
+    height:1220px;
+ }
+ .sidebar button {
+   display: block;
+   width: calc(100% + 40px); /* Ensures the button occupies full width minus padding */
+   margin-left: -20px; /* Offset to align with the sidebar padding */
+   margin-bottom: 15px;
+   background-color: #6D153F;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: calc(5px + 0.7vh + 0.7vw);
+   text-align: left;
+   padding-left: 10px;
+   padding-top: 15px;
+   padding-bottom:15px;
+   letter-spacing: 2px;
+}
+
+ .content {
+    display: flex;
+    width: 80%;
+    padding:5vh;
+    height:1068px;
+   
+ }
+
+ .content h1{
+   width: 80%;
+  
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px; 
+}
+
+.form-group {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; 
+}
+
+label {
+   margin-bottom: 5px; 
+   color: #333; /* Darker label color */
+   font-weight: normal; 
+   
+}
+
+
+/* Adjust sizes of text boxes */
+#newEventTitle, #newEventTime, #newEventDate {
+   height: 40px; /* Reduced height */
+}
+
+#newEventDesc {
+   height: 60px; 
+   resize: vertical; /* Allow only vertical resizing */
+}
+
+#newEventDetailedDesc {
+   height: 120px; 
+   resize: vertical; 
+}
+
+
+input[type="text"],
+textarea,
+input[type="file"],
+input[type="date"],
+input[type="time"],
+select { /* Style all input types consistently */
+   padding: 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px; /* Slightly smaller font size */
+   outline: none;
+   transition: border-color 0.3s;
+   width: 100%;
+   box-sizing: border-box; /* Include padding and border in width */
+}
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="file"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus { /* Style all input types consistently on focus */
+   border-color: #F7A041; /* Use your accent color */
+}
+
+select {
+   padding: 12px; /* Adjust padding for select element */
+}
+
+.photo-preview {
+   margin-bottom: 10px; /* Add space below the image preview */
+   text-align: center; /* Center the image */
+}
+
+.photo-preview img {
+   max-width: 100%;
+   height: auto;
+   display: block; /* Remove extra space below the image */
+}
+
+button {
+   padding: 15px;
+   border: none;
+   background-color: #F7A041;
+   color: #ebe8e8;
+   font-size: 18px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   align-self: flex-end; /* Align button to the right */
+}
+
+button:hover {
+   background-color: #a14e13;
+}
+
+#event-form{
+   margin-bottom:1000px;
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 400px) {
+   .form-container {
+       max-width: 90%; /* Make form responsive */
+   }
+}

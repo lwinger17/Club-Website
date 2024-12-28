@@ -1,0 +1,177 @@
+.admin-page {
+   display: flex;
+   margin-bottom:0px;
+   padding-top: 80px;
+   
+}
+.sidebar {
+   width: 20%;
+   background-color: #6D153F;
+   padding: 20px;
+   border-right: 1px solid #6D153F;
+   position: sticky; 
+   height:1300px;
+
+}
+.sidebar button {
+   display: block;
+   width: calc(100% + 40px);
+   margin-left: -20px; 
+   margin-bottom: 15px;
+   background-color: #6D153F;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color;
+   font-size: calc(5px + 0.7vh + 0.7vw);
+   text-align: left;
+   padding-left: 10px;
+   padding-top: 15px;
+   padding-bottom:15px;
+   letter-spacing: 2px;
+}
+
+.sidebar button:hover {
+   background-color:#65183d;
+}
+
+.content {
+   display: flex;
+   width: 80%;
+   overflow: hidden; 
+}
+.middle-column {
+   width: 60%;
+   padding: 20px;
+   overflow-y: auto; 
+   max-height: calc(100vh - 60px); 
+
+}
+.member-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+.member-grid-item {
+   width: calc(33.33% - 20px);
+   border: 1px solid #F7A041;
+   border-radius: 6px;
+   padding: 10px;
+   text-align: center;
+   transition: transform 0.3s;
+}
+.member-grid-item:hover {
+   transform: scale(1.05);
+}
+.middle img {
+   width: 100%;
+   height: auto;
+}
+.right-column {
+   width: 40%;
+   padding: 20px;
+   border-left: 2px solid #6D153F;
+   overflow-y: auto; 
+}
+.right-column h3 {
+   font-size: calc(10px + 0.7vh + 0.7vw);
+   margin: 0;
+   padding-bottom: 20px;
+}
+.form-group {
+   margin-bottom: 10px;
+}
+.form-group label {
+   display: block;
+   margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+   width: 100%;
+   padding: 8px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+.form-group textarea {
+   height: 100px;
+}
+.form-group button {
+   padding: 10px 15px;
+   background-color: #F7A041;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+#delete {
+   background-color: red;
+}
+
+.delete-button {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   cursor: pointer;
+   color: #7568e8;
+}
+
+.photo-preview img {
+   display: block; /* Prevent extra space below the image */
+   max-width: 100%; /* Ensure image doesn't overflow its container */
+   height: auto; /* Maintain aspect ratio */
+}
+
+.photo-preview {
+   position: relative; /* Needed for absolute positioning of the delete button */
+   margin-bottom: 10px; /* Add spacing below the preview */
+   border: 1px solid #ccc; /* Add a border for better visual separation */
+   padding: 5px; /* Add padding for better visual separation */
+}
+
+.delete-button {
+   position: absolute;
+   top: 5px;
+   right: 5px; /* Position to the top left */
+    /*background-color: #f00; /* Red background */
+   color:red; /* White text */
+   padding: 2px 5px; /* Add padding */
+   border-radius: 50%; /* Make it a circle */
+   cursor: pointer;
+   font-weight: bold; /* Make the X bolder */
+   
+}
+
+.delete-button:hover {
+    background-color:  rgb(233, 197, 35); /* Darker red on hover */
+    transition: transform 0.2s ease;
+    
+}
+
+/*Optional Styling for input*/
+.form-group input[type="file"] {
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+}
+
+.hover-text {
+   position: absolute;
+   top: 100%;
+   left: 40%;
+   transform: translateX(-100%);
+   transform: translateY(-500%);
+   background-color: #F7A041;
+   color: white;
+   padding: 4px 8px;
+   border-radius: 4px;
+   opacity: 0;
+   transition: opacity 0.2s ease;
+   pointer-events: none;
+ }
+ 
+ .delete-button:hover + .hover-text { /* Use the adjacent sibling combinator */
+   opacity: 1;
+ }

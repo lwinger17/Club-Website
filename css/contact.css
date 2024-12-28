@@ -1,0 +1,429 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    background-color: white;
+    max-width: 63.75vw;
+    border-top: 3.75vh #6D153F solid;
+    margin: 0 auto;
+    padding: 2vh 0 2vh 2vw; 
+    box-shadow: 0 0.45vw 0.6vw rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    padding-top: 120px; 
+}
+
+form {
+    flex: 0.6;
+}
+
+h2 {
+    font-size: calc(1.125rem + 1.2vh + 1.2vw);
+    color: #af1c3d;
+    display: block;
+}
+
+.sentMessage{
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+h3 {
+    font-size: calc(0.5rem + 0.5vh + 0.5vw);
+    padding-top: 2.2vh;
+    color: #af1c3d;
+    display: block;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    margin-top: 2vh;
+    max-width: 60vw; 
+    padding: 2.5vh 1.5vw;
+    margin-bottom: 1vh; 
+    border: none;
+    border-radius: 1.5vw;
+    font-size: 0.75rem; 
+    background-color: #FBEDF4;
+}
+
+textarea {
+    height: calc(100px + 5vh);
+    resize: none;
+    margin-top: 2vh;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #828282;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+input[type="submit"] {
+    width: 60%; 
+    max-width: 30vw; 
+    padding: 2vh 0; 
+    background-color: #DD2C54;
+    border: none;
+    border-radius: 3vw;
+    margin-top: 2vh;
+    color: white;
+    font-size: 1.2rem; 
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #7b152d;
+}
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.5vh; 
+    margin-right: 0.75vw; 
+}
+
+.contact-right img {
+    width: 100%;
+    height: auto;
+}
+
+.star-icon1 {
+    position: absolute;
+    top: 20%;
+    left: 55%; 
+    width: auto;
+    max-width: 1.7vw;
+    height: auto; 
+    cursor: move;
+    animation: spin 5.5s linear infinite; 
+}
+
+.star-icon2 {
+    position: absolute;
+    top: 87%; 
+    left: 28%; 
+    width: auto;
+    max-width: 1.2vw;
+    height: auto; 
+    cursor: move;
+    animation: spin 5.5s linear infinite; 
+}
+
+.star-icon3 {
+    position: absolute;
+    top: 38%;
+    left: 75%; 
+    width: auto;
+    max-width: 1.6vw; 
+    height: auto; 
+    cursor: move;
+    animation: spin 4s linear infinite; 
+}
+
+.star-icon4 {
+    position: absolute;
+    top: 88%;
+    left: 92%; 
+    width: auto;
+    max-width: 1vw; 
+    height: auto; 
+    cursor: move;
+}
+
+
+.star-icon5 {
+    position: absolute;
+    top: 72%;
+    left: 87%; 
+    width: auto;
+    max-width: 1.5vw; 
+    height: auto; 
+    cursor: move;
+    animation: spin 5.5s linear infinite; 
+}
+
+.star-icon6 {
+    position: absolute;
+    top: 63%;
+    left:50%; 
+    width: auto;
+    max-width: 1.3vw; 
+    height: auto; 
+    cursor: move;
+}
+
+.mail_icon {
+    position: absolute;
+    top: 10%; 
+    left: 67%;
+    width: auto;
+    max-width: 7vw;
+    height: auto; 
+    cursor: move;
+    animation: diagonal-move 4.5s linear infinite; 
+}
+
+.phone_icon {
+    position: absolute;
+    top: 36%; 
+    left: 40%; 
+    width: auto;
+    max-width: 6.3vw; 
+    height: auto;
+    cursor: move;
+    animation: vertical-move 4s linear infinite; 
+}
+
+.question_icon {
+    position: absolute;
+    top: 68%;
+    left: 14%;
+    width: auto;
+    max-width: 7vw;
+    height: auto;
+    cursor: move;
+    /* animation: question_rotate 4s linear infinite; */
+}
+
+/* ANIMATIONS */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes question_rotate {
+    0% {
+        transform: rotate(-50deg);
+    }
+    50% {
+        transform: rotate(50deg);
+    }
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
+
+@keyframes diagonal-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px); 
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes vertical-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 23px); 
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* CONTACT B ------------------------------ */
+
+.contactB-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 9vh; 
+    margin-right: 0.75vw; 
+    padding-bottom: 30px;
+}
+.contactB-right {
+    flex: 1;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4.5vh; 
+    margin-right: 0.75vw; 
+    padding-bottom: 30px;
+}
+
+
+.contactB-right img {
+    width: 100%;
+    height: auto;
+}
+
+.contactB-right img:first-child {
+    position: relative; 
+    z-index: 20;
+    height: auto;
+    width: calc(10vw + 10vh);
+    padding-top: 30px;
+
+}
+
+.Leaf1 {
+    position: absolute;
+    top: 30%;
+    left: 64%; 
+    width: auto;
+    max-width: 7vw;
+    height: auto; 
+    z-index: 19;
+    animation: wave 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+.Leaf2 {
+    position: absolute;
+    top: 68%;
+    left: 0%; 
+    width: auto;
+    max-width: 15vw;
+    height: auto; 
+    z-index: 19;
+    animation: wave 4.5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf3 {
+    position: absolute;
+    top: 48%;
+    left: 0%; 
+    width: auto;
+    max-width: 10vw;
+    height: auto; 
+    z-index: 18;
+    animation: wave 5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf4 {
+    position: absolute;
+    top: 0%;
+    left: 35%; 
+    width: auto;
+    max-width: 6vw;
+    height: auto; 
+    animation: wave 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf6 {
+    position: absolute;
+    top: 60%;
+    left: 60%; 
+    width: auto;
+    max-width: 12vw;
+    height: auto; 
+    animation: wave 4.5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf7 {
+    position: absolute;
+    top: 15%;
+    left: 25%; 
+    width: auto;
+    max-width: 6vw;
+    height: auto; 
+    animation: wave 5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf8 {
+    position: absolute;
+    top: 35%;
+    left: 55%; 
+    width: auto;
+    max-width: 4vw;
+    height: auto; 
+    animation: wave 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf9 {
+    position: absolute;
+    top: 12%;
+    left: 45%; 
+    width: auto;
+    max-width: 9vw;
+    height: auto; 
+    animation: wave 4.5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf10 {
+    position: absolute;
+    top: 12%;
+    left: 0%; 
+    width: auto;
+    max-width: 13vw;
+    height: auto; 
+    animation: wave 5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf11 {
+    position: absolute;
+    top: 22%;
+    left: 20%; 
+    width: auto;
+    max-width: 4vw;
+    height: auto; 
+    animation: wave 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Leaf12 {
+    position: absolute;
+    top: 25%;
+    left: 60%; 
+    width: auto;
+    max-width: 6vw;
+    height: auto; 
+    animation: wave 4.5s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+.Shadow {
+    position: absolute;
+    top: 85%;
+    width: auto;
+    max-width: 30vw;
+    z-index: 1;
+    height: auto; 
+    cursor: move;
+    
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(-4.5deg);
+    }
+    50% {
+        transform: rotate(4.5deg);
+    }
+ }
+
