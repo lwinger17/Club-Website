@@ -1,0 +1,214 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0; /* Light background */
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-pane {
+    width: 300px;
+    background-color: #800020; /* Maroon */
+    color: #FFFFE0; /* Light Yellow */
+    padding: 10px;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    height:auto;
+    
+    
+  }
+  
+  .calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Add spacing between nav and grid */
+  }
+  
+  .nav-button {
+    background-color: #FFD700; /* Gold */
+    color: #800020; /* Maroon */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #currentMonth {
+    font-weight: bold;
+  }
+  
+  #calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    /* No need for explicit height; flexbox handles it */
+  }
+  
+  .calendar-day {
+    background-color: #FFD700; /* Gold */
+    color: #800020; /* Maroon */
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .calendar-day.current { /* Added style for current day */
+    background-color: #FF8C00; /* Darker Gold */
+  }
+  
+  .right-pane {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #FFFFE0; /* Light Yellow */
+    color: #800020; /* Maroon */
+    
+  }
+
+  .event {
+    border: 1px solid #ccc; /* Existing border */
+    margin-bottom: 15px; /* Increased margin for breathing room */
+    padding: 15px;       /* Increased padding for breathing room */
+    border-radius: 5px;   /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* For hover effect */
+    padding: 10px;
+  }
+
+  .event:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    background-color: #FF8C00; /* Light gray background on hover */
+  }
+  
+  /* Add styles for icons (you'll need to add the actual icon images) */
+  .event .icon {
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
+  }
+
+  .navigation-container {
+    background-color: #8a2424; /* Light gray background */
+    border: 2px solid #DAA520; /* Goldenrod border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add some padding */
+    margin-top: 30px; /* Add spacing from the calendar */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width:250px;
+  }
+  
+  .navigation-container h3 {
+    color: #DAA520; /* Goldenrod title color */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .navigation-container #year-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .navigation-container button {
+    background-color: #FFD700; /* Goldenrod button background */
+    color: #800020;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .navigation-container button:hover {
+    background-color: #B8860B; /* Darker goldenrod on hover */
+  }
+
+
+
+  .all-events-container {
+    background-color: #8a2424; /* Light gray background */
+    border: 1px solid #DAA520;
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: 20px;
+    overflow-y: auto; /* Add scrollbar if needed */
+    max-height: 300px; /* Set a maximum height for the container */
+    display: flex;
+    flex-direction: column; /* Arrange title and list vertically */
+    align-items: center;
+  }
+
+  .event-list {
+    max-height: 200px; /* Adjust as needed */
+    overflow-y: auto; /* Add scrollbar if needed */
+    /*border: 1px solid #ddd;  Add a border for visual separation */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+  }
+  
+  .all-events-container h2 {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .all-events-container ol {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+  }
+  
+  .all-events-container li {
+    background-color: #800020;
+    border: 1px solid #DAA520;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Vertically align items */
+  }
+  
+  .all-events-container li .icon {
+    margin-right: 5px; /* Reduced margin */
+  width: 32px; /* Smaller width */
+  height: 32px; /* Smaller height */
+  }
+  
+  .all-events-container li .event-info {
+    flex-grow: 1; /* Allow event info to take up remaining space */
+  }
+
+  .all-events-container li:hover {
+    background-color: #FF8C00; /* Dark orange background on hover */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    cursor: pointer; /* Indicate that it's clickable */
+  }
+
+
+  .year-navigator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Add spacing below the navigator */
+  }
+  
+  .year-navigator button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    font-size: 1.2em; /* Larger font size */
+    cursor: pointer;
+    color: #DAA520; /* Goldenrod color */
+  }
+  
+  .year-navigator #currentYearDisplay {
+    margin: 0 10px; /* Add spacing around the year display */
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #DAA520; /* Goldenrod color */
+  }
+
+  
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Schedule</title>
+<link rel="stylesheet" href="schedule01style.css">
+</head>
+<body>
+	<main>
+		<div class="container">
+			<div class="left-pane">
+	
+			<div class="year-navigator">
+				<button id="prevYear" class="year-arrow">&lt;</button>
+				<span id="currentYearDisplay"></span>
+				<button id="nextYear" class="year-arrow">&gt;</button>
+			</div>
+	
+			<div class="calendar-nav">
+				<button class="nav-button" id="prevMonth">&lt;</button>
+				<div id="currentMonth"></div>
+				<button class="nav-button" id="nextMonth">&gt;</button>
+			</div>
+	
+	
+	
+			  <div id="calendar-grid"></div>  
+			  <div class="navigation-container">
+					<div class="navigation">
+					<h3>Navigate Events by Month</h3>
+					<div id="year-display"></div>
+					<div id="month-list"></div>
+					</div>
+				</div>
+	
+	
+				<div class="all-events-container">
+					<h3>See All Our Events</h3>
+					<div class="event-list">
+					  <ol id="event-list-all"></ol>
+					</div>
+				  </div>
+	
+	
+			</div>
+			<div class="right-pane">
+				<div id="eventList"></div>
+			</div>
+		</div>
+
+	</main>
+
+  <script src="schedule01script.js"></script>
+
+</body>
+</html>
